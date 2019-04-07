@@ -1,4 +1,6 @@
 # pod_luck, SUTD Library Study Pod Availability Checker
+Link to the checker: https://stephenalvin.github.io/pod_luck/
+
 ![alt text](https://github.com/StephenAlvin/pod_luck/blob/master/podluck.PNG)
 ##### A SUTD Digital World Open Project (10.009)
 
