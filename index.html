@@ -11,6 +11,7 @@
 <p> Pod 2: <a id = "pod_2_status"></a></p>
 <p> Pod 3: <a id = "pod_3_status"></a></p>
 <p> Pod 4: <a id = "pod_4_status"></a></p>
+<p> Pod 5: <a id = "pod_5_status"></a></p>
 </body>
 
 <script>
@@ -24,7 +25,7 @@ function initialize(){
         .then(function(myJson) {
             var response = myJson;
             console.log(response);
-            for(var i = 0; i <= 4; i++){
+            for(var i = 0; i <= 5; i++){
                 var pod_id_str = "pod_" + i + "_status";
                 console.log(pod_id_str);
                 document.getElementById(pod_id_str).innerHTML = response[i];
