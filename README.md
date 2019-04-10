@@ -12,7 +12,7 @@ Looking for a study pod can be time consuming and tedious.
 ### Proposed Solution
 Develop a system whereby students can easily look up on the availability of studypods in the library.
 
-![alt text](https://github.com/StephenAlvin/pod_luck/blob/master/System%20Layout.png)
+![alt text](https://github.com/StephenAlvin/pod_luck/blob/master/Pod_Luck%20(1).png)
 
 #### Development
 Using Ultrasonic sensors to detect availability of study pods. [Usage of sensors project requirement]
