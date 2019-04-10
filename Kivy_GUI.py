@@ -67,6 +67,7 @@ class MyApp(App):
     def get(self):
         request = requests.get(self.url + '?auth=' + self.auth_key)  #pulls data from firebase
         dikt = request.json() #creates the dictionary below
+        print(dikt)
         #dikt = {'r_pi': ['not_occupied', 'not_occupied', 'not_occupied', 'not_occupied', 'not_occupied']}
         pod_list = dikt['r_pi'] #because the value corresponding to the r_pi key is a list, define the value as a list 
         self.root.ids.btn0.text = "Pod 0 is " + str(pod_list[0]) + "."
