@@ -1,6 +1,7 @@
 from kivy.core.window import Window
 Window.fullscreen = 0
 Window.size = (1000, 500)
+
 from kivy.app import App
 from kivy.lang import Builder
 import json
@@ -15,6 +16,7 @@ ScreenManager:
         GridLayout:
             cols:3
             orientation: 'horizontal'
+            
             GridLayout:
                 cols:1
                 Label:
@@ -54,12 +56,21 @@ ScreenManager:
                 rows:1
                 Button:
                     text: 'UPDATE'
-                    font_size: 70
+                    font_size: 50
                     on_release: app.get()
+                    
+            GridLayout:
+                rows:1
+                cols:2
+                Button:
+                    id:btnExit
+                    text:"Exit"
+                    font_size: 50
+                    on_press: app.stopping()
                     
 """)
 
-class MyApp(App):
+class POD_LUCKApp(App):
 
     url = 'https://podluck-b3df6.firebaseio.com/.json'
     auth_key = '2BKTZfCSuILkpIRKzDAIWOMkhaC5jIq069Eg4oLS'
@@ -76,9 +87,13 @@ class MyApp(App):
         self.root.ids.btn3.text = "Pod 3 is " + str(pod_list[3]) + "."
         self.root.ids.btn4.text = "Pod 4 is " + str(pod_list[4]) + "."
         self.root.ids.btn5.text = "Pod 5 is " + str(pod_list[5]) + "."
+        
+    def stopping(self):
+        App.get_running_app().stop()
+        Window.close()
 
     def build(self):
         return KV
 
 if __name__ == '__main__':
-    MyApp().run()
+    POD_LUCKApp().run()
