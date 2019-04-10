@@ -12,7 +12,6 @@ apikey = 'AIzaSyAO161UH-GGDD0ZzVjqtL-OkginRAM_uRI'
 config = {"apiKey": apikey,"databaseURL": url,}
 firebase = pyrebase.initialize_app(config)
 db = firebase.database()
-occupancy = ["initial"]
 
 #SETTING UP THE SERVO
 
@@ -34,7 +33,7 @@ def not_occupied():
     p.start(2.5)
     p.ChangeDutyCycle(2.5) # turn towards 180 degree
     sleep(1) # sleep 1 second
-    db.child("r_pi").update({"0":"occupied"})
+    db.child("r_pi").update({"0":"not_occupied"})
     print("not occupied!")
 
 #SETTING UP THE SENSOR
