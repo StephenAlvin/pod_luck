@@ -15,11 +15,11 @@ db = firebase.database()
 #CREATING FUNCTIONS FOR SENDING DATA TO FIREBASE
 
 def occupied():
-    db.child("r_pi").update({"0":"occupied"})
+    db.child("r_pi").update({"0":"occupied"})           #updates that pod is occupied
     print("occupied!")
     
 def not_occupied():
-    db.child("r_pi").update({"0":"not_occupied"})
+    db.child("r_pi").update({"0":"not_occupied"})       #updates that pod is unoccupied
     print("not occupied!")
 
 #SETTING UP THE SENSOR
