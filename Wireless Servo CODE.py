@@ -39,14 +39,16 @@ p.start(2.5) #swing the servo horn to the initial position regardless which angl
 
 while True:
     
-    var = db.child("r_pi").get()
+    var = db.child("r_pi").get() 
     occupancy_list = var.val()
     pod0_occupancy = occupancy_list[0]
     
-    if pod0_occupancy == 'occupied':
-        occupied()
-    if pod0_occupancy == 'not_occupied':
-        not_occupied()
+    #run conditional loop to determine if pod occupied
+    
+    if pod0_occupancy == 'occupied':          #check if pod occupancy function gives occupied value
+        occupied()                            #run occupied function
+    if pod0_occupancy == 'not_occupied':      #if pod occupancy function gives unoccupied
+        not_occupied()                        #run unoccupied function
 
 
 
