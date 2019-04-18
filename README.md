@@ -22,7 +22,7 @@ Make the data available on a (easy to use) website where any user with the link 
 ![](https://github.com/StephenAlvin/pod_luck/blob/master/Wireless%20Servo%20CAD%20EXPLODED.PNG)
 ![](https://github.com/StephenAlvin/pod_luck/blob/master/Wireless%20Servo%20CAD.PNG)
 
-```
+```python
 #IMPORTING THE LIBRARIES
 import RPi.GPIO as GPIO
 from time import sleep
@@ -78,7 +78,7 @@ while True:
 ![](https://github.com/StephenAlvin/pod_luck/blob/master/Wireless%20Ultrasonic%20Sensor%20EXPLODED.PNG)
 ![](https://github.com/StephenAlvin/pod_luck/blob/master/Wireless%20Ultrasonic%20Sensor%20CAD.PNG)
 
-```
+```python
 #IMPORTING THE LIBRARIES
 
 import RPi.GPIO as GPIO
