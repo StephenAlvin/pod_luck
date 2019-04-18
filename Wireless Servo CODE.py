@@ -46,9 +46,9 @@ while True:
     #run conditional loop to determine if pod occupied
     
     if pod0_occupancy == 'occupied':          #check if pod occupancy function gives occupied value
-        occupied()                            #run occupied function
+        occupied()                            #call occupied function
     if pod0_occupancy == 'not_occupied':      #if pod occupancy function gives unoccupied
-        not_occupied()                        #run unoccupied function
+        not_occupied()                        #call unoccupied function
 
 
 
